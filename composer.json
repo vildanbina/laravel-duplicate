@@ -1,0 +1,52 @@
+{
+    "name": "vildanbina/laravel-duplicate",
+    "description": "Duplicate any Eloquent model along with its underlying relationships",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "duplicate",
+        "replicate",
+        "copy",
+        "eloquent",
+        "model",
+        "relations"
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Vildan Bina",
+            "email": "vildanbina@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5|^8.0|^8.1",
+        "illuminate/contracts": "^7.0|^8.0",
+        "illuminate/support": "^7.0|^8.0",
+        "illuminate/database": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "orchestra/testbench": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "vildanbina\\Duplicate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "vildanbina\\Duplicate\\Tests\\": "tests"
+        },
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
