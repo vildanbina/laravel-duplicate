@@ -20,6 +20,11 @@ trait HasDuplicates
      */
     protected $duplicateOptions;
 
+    public function initializeHasDuplicates()
+    {
+        $this->addObservableEvents(['duplicating', 'duplicated']);
+    }
+
     /**
      * Set the options for the HasDuplicates trait.
      *
