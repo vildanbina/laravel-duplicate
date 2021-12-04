@@ -166,7 +166,7 @@ trait HasDuplicates
         $excluded = $this->duplicateOptions->excludedRelations ?: [];
 
         foreach (RelationHelper::getModelRelations($this) as $relation => $attributes) {
-            if (! in_array($relation, $excluded)) {
+            if (! in_array($relation, $excluded) && method_exists($this, $relation)) {
                 $relations[$relation] = $attributes;
             }
         }
